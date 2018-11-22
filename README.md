@@ -1,4 +1,4 @@
-#Advanced Algorithms
+# Advanced Algorithms
 
-##Sorting
+## Sorting
 1. Merge sort.
