@@ -21,7 +21,7 @@ int main(int argc, char** argv) {
         cout << values[i] << endl;
     }
 
-    bubbleSort(values, array_size);
+    mergeSort(values, array_size); // contains off by one error
 
     cout << endl << "Sorted" << endl;
 
