@@ -14,6 +14,12 @@ public:
                 board[i][j] = 'g';
             }
         }
+
+        // init board
+        board[rowCount/2][rowCount/2] = 'w';
+        board[(rowCount/2)-1][(rowCount/2)-1] = 'w';
+        board[(rowCount/2)][(rowCount/2)-1] = 'b';
+        board[(rowCount/2)-1][(rowCount/2)] = 'b';
     }
 
     ~Board() {
@@ -28,10 +34,14 @@ public:
             printf("[");
             for (int j = 0; j < rows; j++) {
                 printf("%c", board[i][j]);
-                if (j != rows - 1) printf(",");
+                if (j != rows - 1) printf(" ");
             }
             printf("]\n");
         }
+    }
+
+    void movesAvailable(string colorMarker) {
+        
     }
 
 private:
