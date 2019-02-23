@@ -6,6 +6,12 @@
 using namespace std;
 typedef int mytype;
 
+void displayArray(int* array, int length) {
+    for (int i = 0; i < length; i++) {
+        printf("%d\n", array[i]);
+    }
+}
+
 int main(int argc, char** argv) {
     int n;
     if (argc < 2) n = 20; else n = atoi(argv[1]);
@@ -16,7 +22,12 @@ int main(int argc, char** argv) {
         array[i] = rand();
     }
 
-    sort(array, 0, n);
+    cout << "Before:" << endl;
+    displayArray(array, n);
+    quicksort(array, 0, n);
+    cout << endl << "After:" << endl;
+    displayArray(array, n);
+
     delete[] array;
     return 0;
 }
