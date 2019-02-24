@@ -19,12 +19,12 @@ int main(int argc, char** argv) {
     mytype* array = new mytype[n];
     srand((unsigned)time(0));
     for (int i = 0; i < n; i++) {
-        array[i] = rand();
+        array[i] = rand() % 10000;
     }
 
     cout << "Before:" << endl;
     displayArray(array, n);
-    quicksort(array, 0, n);
+    quicksort(array, n);
     cout << endl << "After:" << endl;
     displayArray(array, n);
 
