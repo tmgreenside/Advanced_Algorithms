@@ -5,7 +5,8 @@ typedef int mytype;
 using namespace std;
 
 /*
-TODO - document, describe purpose
+This function selects the index for where the array will
+be broken into two.
 */
 int partition(int* array, int low, int high) {
     int pivot = array[high];
